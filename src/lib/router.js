@@ -11,14 +11,16 @@ export const router = (hash) => {
 
     if (hash === '#/' || hash === '/' || hash === '#' || hash === '') {
       rootBox.appendChild(login());
-      //login(); 
+      
     } else if (hash === '#/login') {
       rootBox.appendChild(login());
-      //login();
+      
     } else if (hash === '#/register') {
       rootBox.appendChild(register());
-      //eventsRegister(); 
+      
     } else if (hash === '#/wall') {
       rootBox.appendChild(wall());
-    }
+
+    } 
+  
   };

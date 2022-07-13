@@ -1,4 +1,4 @@
-import { getAuth, GoogleAuthProvider, signInWithPopup, getRedirectResult, onAuthStateChanged } from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
+import { getAuth, GoogleAuthProvider, signInWithPopup, getRedirectResult, onAuthStateChanged, signOut} from "https://www.gstatic.com/firebasejs/9.8.3/firebase-auth.js";
 import { configInitial } from './index.js';
 import { router } from "./router.js";
 
@@ -8,28 +8,6 @@ const auth = getAuth();
 const provider = new GoogleAuthProvider();
 
 
-/*export const googleAuth = () => {
-    getRedirectResult(auth)
-    //signInWithPopup(auth, provider)
-    .then((result) => {
-        console.log(result)
-
-        const credential = provider.credentialFromResult(result);
-        const token = credential.accessToken;
-
-        const user = result.user;
-    })
-    .cath((error) => {
-
-        const errorCode = error.code;
-        const errorMessage = error.message;
-        const email = error.email;
-
-        const credential = provider.credentialFromResult(error);
-    });
-
-};*/
-
 export const Iniciargoogle = () => {
     signInWithPopup(auth, provider)
     .then((result) => {
@@ -38,9 +16,10 @@ export const Iniciargoogle = () => {
       const token = credential.accessToken;
       // The signed-in user info.
       const user = result.user;
-      router("#/wall")
+      window.location.href = '#/wall'
       // ...
     }).catch((error) => {
+      console.log(error.message)
       // Handle Errors here.
       const errorCode = error.code;
       const errorMessage = error.message;
@@ -52,55 +31,14 @@ export const Iniciargoogle = () => {
     });
     
 };
-/*onAuthStateChanged(auth, (user) => {
-    googleAuth(auth);
-});*/
 
-
-
-
-import { collection, addDoc } from "https://www.gstatic.com/firebasejs/9.8.1/firebase-firestore.js"
-/*import { async } from "regenerator-runtime";
-
-// base de datos usuarios Google
-const googleUsers = async () => {
-    const user = auth.currentUser;
-    if (user !== null) {
-      const docRef = await addDoc(collection(db, 'googleUsers'), {
-        name: user.displayName,
-        email: user.email,
-        uid: user.uid,
-        photo: user.photoURL,
-      });
-    }
-
-    try {
-        const docRef = await addDoc(collection(db, "users"), {
-          first: "Alan",
-          middle: "Mathison",
-          last: "Turing",
-          born: 1912
-        });
-      
-        console.log("Document written with ID: ", docRef.id);
-      } catch (e) {
-        console.error("Error adding document: ", e);
-      }
-  };*/
-
-
-//const auth = getAuth();
-//const provider = GoogleAuthProvider();
-
-/*const ingresoConGoogle = async () => {
-    try {
-      const usuarioGoogle = await signInWithPopup ( auth, provider);
-      return usuarioGoogle.user
-    } catch (error) {
-    alert("error");
-     return null;
-        
-    }
+const logOut = async () => {
+  try {
+    await signOut(auth);
+    window.location.href = '#/login'
+      } catch (error) {
+  }
 };
 
-export { ingresoConGoogle }*/
+export {logOut}
+

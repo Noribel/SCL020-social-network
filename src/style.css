@@ -2,10 +2,11 @@
     border: 0;
     padding: 0;
     box-sizing: 0;
+    
 }
 
 html, body {
-    background-color: aqua;
+    background-color: #23C7DE;
     width: 100%;
     height: 100%;
     padding-top: auto;
@@ -16,7 +17,119 @@ header {
     display: grid;
     grid-area: "header";
     padding-top: 0;
-    background-color: blue;
+}
+
+.logoWall {
+width: 10em;
+display: grid;
+margin-left: 6em;
+padding-top: 1em;
+
+}
+
+#logOut {
+    width: 1.5em;
+    height: 1.5em;
+    display: grid;
+    margin-left: 20em;
+    padding-bottom: 2em;
+
+}
+
+#posts {
+    height: 4em;
+    margin-left: 1.25em;
+    border: #070707;
+    border-radius: 0.5em;
+    border-style: solid;
+    
+}
+
+#publish {
+    height: 1.7em;
+    width: 8em;
+    border: #070707;
+    margin-left: 2em;
+    border-radius: 0.4em;
+    display: grid;
+    margin-left: 9em;
+    border-style: solid;
+    padding-top: 0.2em;
+    background-color: rgb(189, 189, 194);
+    
+}
+
+.user-photo {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.8em;
+    padding-top: 1em;
+}
+
+.date {
+    font-size: 0.7em;
+    margin-left: 2.9em;
+    padding-bottom: 1em;
+}
+
+.publicacion {
+    background-color: white;
+    width: 25em;
+    height: 10em;
+    border-radius: 0.4em;
+    font-size: 0.8em;
+    margin-left: 1.5em;
+    margin-top: 2.5em;
+
+}
+
+.finalP {
+    margin-left: 1.5em;
+}
+
+.editar {
+    width: 0.8em;
+    height: 1em;
+    display: grid;
+    margin-left: 22em;
+   justify-items: center;
+   background-color: white;
+
+}
+
+.comment {
+    background-color: white;
+    margin-left: 0.7em;
+    margin-right: 1em;
+    height: 2em;
+    margin-top: -1em;
+    width: 2em;
+}
+
+.edit {
+    background: none;
+
+}
+.deletes {
+    width: 1em;
+    height: 1em;
+    margin-left: 0.5em;
+    
+}
+
+.delete {
+    background: none;
+}
+
+.likes {
+    width: 1em;
+    height: 1em; 
+    margin-left: 0.5em;
+   
+}
+
+.like {
+    background: none;
 }
 
 .containerLogin {
@@ -40,10 +153,12 @@ header {
     margin-left: 3.5rem;
 
 }
+
 h1 {
     color: black;
     text-align: center;
     font-size: 1.3rem;
+    font-style: oblique;
 }
 
 .logo {
@@ -52,7 +167,7 @@ h1 {
     justify-content: center;
     padding-bottom: 3rem;
     gap: 1em;
-    margin-left: auto;
+    margin-left: 1em;
 
 }
 
@@ -117,9 +232,21 @@ h1 {
     text-align: center;
     background-color: white;
 }
-.back {
-    display: flex;
+
+.condiciones {
+    width: 12rem;
+    height: 1.5rem;
     text-align: center;
+    padding-bottom: 1.5rem;
+    
+   
+}
+.back {
+
+    margin-top: 0.5em;
+    margin-left: 5.7em;
+
+
 }
 .formRegister {
     text-align: center;
@@ -127,6 +254,7 @@ h1 {
     grid-area: "inputs";
     justify-content: center;
     align-items: center;
+    margin-left: 0em;
     gap: 0.5em;
 
 }
@@ -137,17 +265,11 @@ footer {
     padding-bottom: 0%;
     text-align: center;
     padding: 3rem;
+    font-size: small;
 }
 
 .logoWall {
     border-radius: 100%;
     display: flex;
     height: 10rem;
-}
-
-#logout {
-    height: 0.2rem;
-    width: 0.2rem;
-    display: flex;
-    
 }

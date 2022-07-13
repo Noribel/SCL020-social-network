@@ -4,7 +4,7 @@ import { Iniciargoogle } from '../lib/firebase.js';
 //import { signInWithRedirect, getRedirectResult} from "https://www.gstatic.com/firebasejs/9.8.1/firebase-auth.js";
 
 export const login = () => {
-    window.location.hash = '/login';
+    window.location.hash = '#/login';
     const pageLogin = document.createElement('div');
     pageLogin.className = 'div';
     
@@ -15,7 +15,7 @@ export const login = () => {
    <header></header>
     <div class="logo">
     <h1>MUJERES CONTRA VIENTO Y MAREA</h1>
-        <img class="imgLogo" src="imagenes/logo.webp">
+        <img class="imgLogo" src="http://www.eltiempodelosaficionados.com/MARITIMATIMON.gif">
     </div>
     <form name="inputsForm" type="submit" class="login"> 
     <form name="login" type="submit" class="loginForm">
@@ -33,37 +33,11 @@ export const login = () => {
 </div>
     `;
 
-    //Botón google
-  //  containerLogin
-  //.querySelector('#google')
- // .addEventListener('click', () => {
-   // loginGoogle();
-  //});
-
-/*const botonGoogle = document.querySelector('#google');
- botonGoogle.addEventListener ('click', async () => {
-    const usuario = await ingresoConGoogle();
-    if (usuario) {
-      router('#/wall')  
-    } else (console.log('error'));
-});*/
-
-
-   
-
     pageLogin.querySelector('.google').addEventListener('click', () => {
         console.log("hi");
         //googleAuth();
         Iniciargoogle();
     });
- 
-/*const inWithGoogle = async () => {
-    const redirected = await getRedirectResult(auth);
-    if (redirected) { changeRoute('#/wall'); }
-  };
-  inWithGoogle();
-
-    return containerLogin;*/
 
     return pageLogin;
 
